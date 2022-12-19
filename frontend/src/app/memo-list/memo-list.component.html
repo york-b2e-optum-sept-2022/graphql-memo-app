@@ -1,0 +1,5 @@
+<input [ngModel]="memoFilter" (ngModelChange)="onFilterChange($event)">
+
+<div *ngFor="let memo of memoList">
+  {{memo.text}}
+</div>

@@ -1,0 +1,32 @@
+type Query {
+    memoList(filter: MemoFilter): [Memo],
+}
+
+type Mutation {
+    createMemo(memo: NewMemo!): Memo,
+}
+
+input NewMemo {
+    text: String
+}
+
+input MemoFilter {
+    text: String
+}
+
+type Memo {
+    id: ID,
+    text: String,
+    prop1: Int,
+    prop2: Int,
+    prop3: Int,
+    prop4: Int,
+    prop5: Int,
+    prop6: Int,
+    fooList: [Foo]
+}
+
+type Foo {
+id: ID,
+num: Int
+}
